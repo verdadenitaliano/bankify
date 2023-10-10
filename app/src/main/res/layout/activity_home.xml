@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightPurple">
+
+
+    <ImageView
+        android:id="@+id/BankImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/rbclogo"
+        />
+
+<TextView
+    android:id="@+id/lblBalance"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="75dp"
+    android:layout_below="@+id/BankImage"
+    android:text="Balance:"
+    android:textColor="@color/white"
+    android:textSize="24sp"/>
+
+<TextView
+    android:id="@+id/lblAmount"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/lblBalance"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="8dp"
+    android:text="0$"
+    android:textColor="@color/white"
+    android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/btnWithdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Withdraw"
+        android:textColor="@color/lightGray"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnWithdraw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Send Money"
+        android:textColor="@color/lightGray"/>
+
+
+
+
+
+</RelativeLayout>
