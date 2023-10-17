@@ -2,8 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="lightPurple">#6666FF</color>
+    <color name="lightPurple">#724FAF</color>
     <color name="lightGray">#C0C0C0</color>
+    <color name="tangerine">#F08000</color>
+    <color name="darkGray">#42403E</color>
 
 
 </resources>

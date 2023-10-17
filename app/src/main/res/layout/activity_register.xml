@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@color/lightPurple">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="If you bank you can"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bankify"
+        android:textSize="30dp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Register using your debit or credit card"
+        android:textSize="15dp"
+        android:textColor="@color/white"/>
+    <EditText
+        android:id="@+id/regCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Debit/credit card N°"/>
+    <EditText
+        android:id="@+id/regPostalCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Postal Code"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0dp">
+        <TextView
+            android:id="@+id/expiryD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expiry date"
+            android:textSize="15dp"
+            android:textColor="@color/white"/>
+
+        <!-- pending add date picker-->
+        <EditText
+            android:id="@+id/regExpMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expiryD"
+            android:hint="Month"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/regExpYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/regExpMonth"
+            android:layout_below="@id/expiryD"
+            android:hint="Year"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/regPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        android:hint="Password"/>
+    <EditText
+        android:id="@+id/regConfPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Confirm Password"/>
+
+    <Button
+        android:layout_marginTop="40dp"
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/tangerine"
+        android:text="Register"
+        />
+    <Button
+        android:id="@+id/btnLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/lightPurple"
+        android:text="Log in"
+        android:backgroundTint="@color/white"
+        />
+
+
+
+</LinearLayout>
