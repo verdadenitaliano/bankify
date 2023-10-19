@@ -63,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String passworduser = regPass.getText().toString().trim();
                 String confPassw = regCPass.getText().toString().trim();
 
-                if (cardNum.isEmpty() || postalCode.isEmpty() || passworduser.isEmpty() || confPassw.isEmpty()) {
+                /*if (cardNum.isEmpty() || postalCode.isEmpty() || passworduser.isEmpty() || confPassw.isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Fill all fields", Toast.LENGTH_SHORT).show();
                     return;
                 } else {
@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Intent intent = new Intent(RegisterActivity.this, home.class);
                     startActivity(intent);
                     finish();
-                }
+                }*/
             }
         });
 
