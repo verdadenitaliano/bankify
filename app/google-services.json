@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "492780394539",
-    "project_id": "bankify-2e669",
-    "storage_bucket": "bankify-2e669.appspot.com"
+    "project_number": "404954607534",
+    "project_id": "bankify-4c0c3",
+    "storage_bucket": "bankify-4c0c3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:492780394539:android:368500819ede89bfddf26e",
+        "mobilesdk_app_id": "1:404954607534:android:bf81e6c186b4a28b43223f",
         "android_client_info": {
           "package_name": "com.example.bankify"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC9qTMk-hbmeA9bT8lZ-48JneoplDP00Zk"
+          "current_key": "AIzaSyCl8V70sjeFHWx5OTiyiS7yFgoRQ0L_gTA"
         }
       ],
       "services": {
