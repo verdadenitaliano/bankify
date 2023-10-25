@@ -82,7 +82,7 @@ public class AdmCreateAccountAct extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                Toast.makeText(AdmCreateAccountAct.this, "Select month", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(AdmCreateAccountAct.this, "Select month", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -104,7 +104,7 @@ public class AdmCreateAccountAct extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                Toast.makeText(AdmCreateAccountAct.this, "Select year", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(AdmCreateAccountAct.this, "Select year", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -125,7 +125,7 @@ public class AdmCreateAccountAct extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                Toast.makeText(AdmCreateAccountAct.this, "Select day", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(AdmCreateAccountAct.this, "Select day", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -146,7 +146,7 @@ public class AdmCreateAccountAct extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                Toast.makeText(AdmCreateAccountAct.this, "Select month", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(AdmCreateAccountAct.this, "Select month", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -173,7 +173,7 @@ public class AdmCreateAccountAct extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String item = adapterView.getItemAtPosition(i).toString();
                 provinceSelected = item;
-                Toast.makeText(AdmCreateAccountAct.this,item, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(AdmCreateAccountAct.this,item, Toast.LENGTH_SHORT).show();
             }
 
             @Override
