@@ -16,19 +16,37 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
-    private EditText cardNumber,sessionPassword;
-    private Button btnRegister,btnLogin;
+    EditText cardNumber,sessionPassword;
+    Button btnRegister,btnLogin;
     Spinner spn;
+    String loggedCardHolder;
 
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        cardNumber = findViewById(R.id.txtcardNumber);
+        sessionPassword = findViewById(R.id.txtSessionPassword);
+        btnRegister = findViewById(R.id.registerbtn);
+        btnLogin = findViewById(R.id.btnLogin);
+        mAuth = FirebaseAuth.getInstance();
 
         spn = findViewById(R.id.spn);
 
@@ -52,22 +70,19 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        db = FirebaseFirestore.getInstance();
 
-
-        cardNumber = findViewById(R.id.txtcardNumber);
-        sessionPassword = findViewById(R.id.txtSessionPassword);
-        btnRegister = findViewById(R.id.registerbtn);
-        btnLogin = findViewById(R.id.btnLogin);
-        mAuth = FirebaseAuth.getInstance();
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this,home.class);
                 startActivity(intent);
 
             }
 
         });
+
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,37 +90,36 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser currentuser = mAuth.getCurrentUser();
-        if(currentuser != null){
-            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-            startActivity(intent);
-            finish();
+
+        private void loginUSer () {
+
+
+            db.collection("users")
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if(task.isSuccessful()){
+                                for(QueryDocumentSnapshot doc : task.getResult()){
+                                    String a=doc.getString("cardNumber");
+                                    String b=doc.getString("password");
+                                    String cardNum = cardNumber.getText().toString().trim();
+                                    String password = sessionPassword.getText().toString().trim();
+                                    if(a.equalsIgnoreCase(cardNum) && b.equalsIgnoreCase(password)) {
+                                        Toast.makeText(LoginActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
+                                        Intent home = new Intent(LoginActivity.this, AdminHomeActivity.class);
+                                        startActivity(home);
+                                    }else
+                                        Toast.makeText(LoginActivity.this, "Cannot login,incorrect Email and Password", Toast.LENGTH_SHORT).show();
+
+                                }
+
+                            }
+                        }
+                    });
+
         }
-    }
-    private void loginUSer(){
-        String email =cardNumber.getText().toString().trim();
-        String password = sessionPassword.getText().toString().trim();
-        if(email.isEmpty() || password.isEmpty()){
-            Toast.makeText(this, "Enter your details", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(LoginActivity.this, "Login success", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-                else{
-                    Toast.makeText(LoginActivity.this, "check your credentials", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
+
 
 }
+
