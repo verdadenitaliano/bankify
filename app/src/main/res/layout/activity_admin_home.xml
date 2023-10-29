@@ -65,17 +65,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search"/>
-    <Button
-        android:id="@+id/btnCreateAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create"/>
 
-    <ListView
-        android:id="@+id/lstSearchResult"
+
+    <TextView
+        android:id="@+id/searchresulttextview"
         android:layout_width="match_parent"
         android:layout_height="162dp"
-        android:paddingTop="50dp"/>
+        android:paddingTop="20dp"/>
 
 
     <LinearLayout

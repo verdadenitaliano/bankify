@@ -44,14 +44,7 @@ public class AdminDetailActivity extends AppCompatActivity {
 
         showalluserData();
 
-        btneditprofile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AdminDetailActivity.this, AdminHomeActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
 
         btntransfer.setOnClickListener(new View.OnClickListener() {
             @Override
