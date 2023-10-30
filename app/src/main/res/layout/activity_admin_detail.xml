@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_margin="10dp">
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <EditText
             android:id="@+id/txtdetailname"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -31,7 +31,7 @@
             />
 
     </LinearLayout>
-    <TextView
+    <EditText
         android:id="@+id/txtdetailgender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:textSize="20dp"
         />
 
-    <TextView
+    <EditText
         android:id="@+id/txtdetailaddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <EditText
             android:id="@+id/txtdetailpostal"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -67,7 +67,7 @@
 
     </LinearLayout>
 
-    <TextView
+    <EditText
         android:id="@+id/txtdetailcardnumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
         />
 
 
-    <TextView
+    <EditText
         android:id="@+id/txtdetaildob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
         android:text="Date of birth"
         />
 
-    <TextView
+    <EditText
         android:id="@+id/txtdetailemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
         android:textSize="20dp"
         android:text="Email"
         />
-    <TextView
+    <EditText
         android:id="@+id/txtdetailphone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -112,21 +112,20 @@
 
 
         <Button
-            android:id="@+id/btneditprofile"
+            android:id="@+id/btnMod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:text="Edit"
-            />
+            android:layout_marginTop="2dp"
+            android:text="Mod" />
 
         <Button
-            android:id="@+id/btntransfer"
+            android:id="@+id/btnreturn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:text="Transfer Money"
+            android:layout_marginTop="2dp"
+            android:text="Return"
             />
 
     </LinearLayout>
