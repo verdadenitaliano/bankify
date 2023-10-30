@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Amount"
+            android:inputType="number"
             android:layout_marginTop="20sp"/>
 
         <EditText
@@ -37,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Confirm Amount"
+            android:inputType="number"
             android:layout_marginTop="20sp"/>
     </LinearLayout>
 
