@@ -107,7 +107,8 @@ public class LoginActivity extends AppCompatActivity {
                                     String password = sessionPassword.getText().toString().trim();
                                     if(a.equalsIgnoreCase(cardNum) && b.equalsIgnoreCase(password)) {
                                         Toast.makeText(LoginActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
-                                        Intent home = new Intent(LoginActivity.this, AdminHomeActivity.class);
+                                        Intent home = new Intent(LoginActivity.this, home.class);
+                                        home.putExtra("cardnum",cardNum);
                                         startActivity(home);
                                     }else
                                         Toast.makeText(LoginActivity.this, "Cannot login,incorrect Email and Password", Toast.LENGTH_SHORT).show();

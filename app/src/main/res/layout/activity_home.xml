@@ -50,16 +50,16 @@
         android:textColor="@color/white"/>
 
 
-    <ListView
-        android:id="@+id/historyListView"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnUpdateBal"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnSendMoney"
-        android:layout_marginTop="16dp"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp" />
-
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Update Balance"
+        android:backgroundTint="@color/lightPurple"
+        android:textColor="@color/white"/>
 
 
 </RelativeLayout>
